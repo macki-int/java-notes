@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.mj.notes.Main.loopFor;
-import static com.mj.notes.Main.loopForEach;
+import static com.mj.notes.Main.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoopTest {
@@ -32,7 +31,19 @@ public class LoopTest {
 
         //Then
         assertEquals("OneTwo", loopForEach(stringList));
+    }
 
+    @Test
+    @DisplayName("While loop")
+    void testLoopWhile(){
+        //Given
+        int i;
+
+        //When
+        i = 3;
+
+        //Then
+        assertEquals(6,loopWhile(i));
     }
 
 }
