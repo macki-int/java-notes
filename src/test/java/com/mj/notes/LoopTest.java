@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LoopTest {
     @Test
     @DisplayName("Simple loop For")
-    void testLoopFor(){
+    void testLoopFor() {
 //        int counterMaxValue = 3;
         int resultLoopFor = loopFor(3);
 
@@ -21,7 +21,7 @@ public class LoopTest {
 
     @Test
     @DisplayName("For Each loop")
-    void testLoopForEach(){
+    void testLoopForEach() {
         //Given
         List<String> stringList = new LinkedList<>();
 
@@ -35,7 +35,7 @@ public class LoopTest {
 
     @Test
     @DisplayName("While loop")
-    void testLoopWhile(){
+    void testLoopWhile() {
         //Given
         int i;
 
@@ -43,7 +43,19 @@ public class LoopTest {
         i = 3;
 
         //Then
-        assertEquals(6,loopWhile(i));
+        assertEquals(6, loopWhile(i));
     }
 
+    @Test
+    @DisplayName("WhileDo loop")
+    void testDoWhileLoop() {
+        //Given
+        int i;
+
+        //When
+        i = 3;
+
+        //Then
+        assertEquals(0, loopDoWhile(i));
+    }
 }
