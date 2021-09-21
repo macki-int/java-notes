@@ -23,14 +23,14 @@ public class LoopTest {
     @Test
     @DisplayName("For Each loop")
     void testLoopForEach(){
-        //give
+        //Given
         List<String> stringList = new LinkedList<>();
 
-        //when
+        //When
         stringList.add("One");
         stringList.add("Two");
 
-        //then
+        //Then
         assertEquals("OneTwo", loopForEach(stringList));
 
     }
