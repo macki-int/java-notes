@@ -26,7 +26,7 @@ public class Main {
         String string = new String();
 
         for (String s : stringList) {
-            string = s;
+            string += s;
         }
         return string;
     }
