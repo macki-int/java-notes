@@ -14,6 +14,8 @@ public class Main {
         System.out.println(loopForEach(stringList));
 
         System.out.println(loopWhile(3));
+
+        System.out.println(loopDoWhile(3));
     }
 
     static int loopFor(int maxValue) {
@@ -38,9 +40,18 @@ public class Main {
         int j = 0;
         while (i < value) {
             i++;
-            j=j+i;
+            j = j + i;
         }
 
         return j;
+    }
+
+    static int loopDoWhile(int value) {
+        do {
+            value--;
+        }
+        while (value > 0);
+
+        return value;
     }
 }
