@@ -12,6 +12,8 @@ public class Main {
         List<String> stringList = new ArrayList<>();
         stringList.add("One");
         System.out.println(loopForEach(stringList));
+
+        System.out.println(loopWhile(3));
     }
 
     static int loopFor(int maxValue) {
@@ -29,5 +31,16 @@ public class Main {
             string += s;
         }
         return string;
+    }
+
+    static int loopWhile(int value) {
+        int i = 0;
+        int j = 0;
+        while (i < value) {
+            i++;
+            j=j+i;
+        }
+
+        return j;
     }
 }
