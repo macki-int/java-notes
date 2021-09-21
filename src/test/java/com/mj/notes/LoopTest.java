@@ -3,7 +3,11 @@ package com.mj.notes;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import static com.mj.notes.Main.loopFor;
+import static com.mj.notes.Main.loopForEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoopTest {
@@ -14,6 +18,21 @@ public class LoopTest {
         int resultLoopFor = loopFor(3);
 
         assertEquals(3, resultLoopFor);
+    }
+
+    @Test
+    @DisplayName("For Each loop")
+    void testLoopForEach(){
+        //give
+        List<String> stringList = new LinkedList<>();
+
+        //when
+        stringList.add("One");
+        stringList.add("Two");
+
+        //then
+        assertEquals("OneTwo", loopForEach(stringList));
+
     }
 
 }
