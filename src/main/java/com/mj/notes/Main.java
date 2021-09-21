@@ -6,11 +6,12 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
         System.out.println(loopFor(4));
 
         List<String> stringList = new ArrayList<>();
         stringList.add("One");
-        loopForEach(stringList);
+        System.out.println(loopForEach(stringList));
     }
 
     static int loopFor(int maxValue) {
@@ -21,9 +22,12 @@ public class Main {
         return counter;
     }
 
-    static void loopForEach(List<String> stringList){
-        for(String s: stringList){
-            System.out.println(s);
+    static String loopForEach(List<String> stringList) {
+        String string = new String();
+
+        for (String s : stringList) {
+            string = s;
         }
+        return string;
     }
 }
