@@ -1,57 +1,28 @@
 package com.mj.notes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(loopFor(4));
+        System.out.println(simpleSwitch(2));
 
-        List<String> stringList = new ArrayList<>();
-        stringList.add("One");
-        System.out.println(loopForEach(stringList));
-
-        System.out.println(loopWhile(3));
-
-        System.out.println(loopDoWhile(3));
     }
 
-    static int loopFor(int maxValue) {
-        int counter = 0;
-        for (int i = 0; i < maxValue; i++) {
-            counter++;
-        }
-        return counter;
-    }
-
-    static String loopForEach(List<String> stringList) {
+    static String simpleSwitch(int value) {
         String string = new String();
 
-        for (String s : stringList) {
-            string += s;
+        switch (value) {
+            case 1:
+                string = "One";
+                break;
+            case 2:
+                string = "Two";
+                break;
+            default:
+                string="Wrong value";
         }
         return string;
     }
 
-    static int loopWhile(int value) {
-        int i = 0;
-        int j = 0;
-        while (i < value) {
-            i++;
-            j = j + i;
-        }
 
-        return j;
-    }
-
-    static int loopDoWhile(int value) {
-        do {
-            value--;
-        }
-        while (value > 0);
-
-        return value;
-    }
 }
